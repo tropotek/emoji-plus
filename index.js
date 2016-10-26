@@ -50,17 +50,31 @@ var emojiList = require("./emoji.json");
 var items = [];
 for(var i = 0; i < emojiList.length; i++) {
   var em = emojiList[i];
-  if (em.category == 'People') {
-    var text = em.short_name;
-    if (em.text)
-      text = em.text + ' ' + text;
-    console.log(em);
-    items.push(cm.Item({
-        label: text,
-        data: em.text
-      })
-    );
-  }
+  if (em.category != 'People') continue;
+  if (!em.text) continue;
+  var img = null;
+  items.push(cm.Item({
+      label: em.text + ' ' + em.short_name,
+      data: em.text
+    })
+  );
+}
+
+for(var i = 0; i < emojiList.length; i++) {
+  var em = emojiList[i];
+  if (em.category != 'People') continue;
+  if (!em.has_img_emojione) continue;
+  var text = em.text;
+  if (!text && em.unified)
+    text = "\u" + em.unified;     // This ineeds to be inserting a valid unicode char into the browser not the unicode string
+  if (!text) continue;
+
+  items.push(cm.Item({
+      label: em.short_name,
+      data: text,
+      image: self.data.url("emojione/"+em.image)
+    })
+  );
 }
 
 
