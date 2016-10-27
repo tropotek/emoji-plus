@@ -66,7 +66,7 @@ for(var i = 0; i < emojiList.length; i++) {
   if (!em.has_img_emojione) continue;
   var text = em.text;
   if (!text && em.unified)
-    text = "\u" + em.unified;     // This ineeds to be inserting a valid unicode char into the browser not the unicode string
+    text = "\u" + em.unified;     // This needs to be inserting a valid unicode char into the browser not the unicode string
   if (!text) continue;
 
   items.push(cm.Item({
