@@ -4,10 +4,11 @@
 # Ignore any zip or xpi files
 *.zip
 *.xpi
-
+/test
+/.git
 .gitignore
 *.bat
 Thumbs.db
 .idea
-_notes
+/_notes
 

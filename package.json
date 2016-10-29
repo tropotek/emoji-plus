@@ -1,7 +1,7 @@
 {
-  "title": "Imoji Plus",
-  "name": "imoji-plus",
-  "version": "0.0.1",
+  "title": "Emoji Plus",
+  "name": "emoji-plus",
+  "version": "1.0.0",
   "description": "Insert emojis from the context menu.",
   "main": "index.js",
   "author": "Metal Mick",
@@ -11,6 +11,6 @@
   },
   "license": "MIT",
   "keywords": [
-    "imoji"
+    "Emoji"
   ]
 }
