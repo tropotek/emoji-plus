@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Form</title>
+
+
+  <script src="../data/js/textInsert.js"></script>
+
+
+<style>
+label {
+}
+</style>
+
+
+
+</head>
+<body>
+<h2>Emoji Plus</h2>
+<p>This is a test for for the Emoji Plus Firefox Addon.</p>
+<form method="post" onsubmit="javascript:return false;">
+  <p>
+      <label>Empty Input
+          <input type="text" name="text1" value=""/>
+      </label>
+  </p>
+  <p>
+    <label>Text Input
+    <input type="text" name="text2" value="This is some way interesting text." />
+    </label>
+  </p>
+  <p>
+    <label>Empty Textarea
+    <textarea name="textarea1"></textarea>
+    </label>
+  </p>
+  <p>
+    <label>Textarea
+    <textarea name="textarea2" rows="4" cols="60">To test that this worked, try installing the XPI file in your own Firefox installation.
+      You can do this by pressing the Ctrl+O key combination (Cmd+O on Mac) from within Firefox,
+      or selecting the "Open" item from Firefox's "File" menu. This will bring up a file selection
+      dialog: navigate to the "@my-addon.xpi" file, open it and follow the prompts to install the add-on.</textarea>
+    </label>
+  </p>
+  <div>
+    <label>Content Editable</label>
+    <p id="contenteditable" contenteditable="true">To test that this worked, try installing the XPI file in your own Firefox installation.
+      You can do this by pressing the Ctrl+O key combination (Cmd+O on Mac) from within Firefox,
+      or selecting the "Open" item from Firefox's "File" menu. This will bring up a file selection
+      dialog: navigate to the "@my-addon.xpi" file, open it and follow the prompts to install the add-on.</p>
+  </div>
+  <p>&nbsp;</p>
+  <p><a id="insertBtn" href="javascript:;">Insert Text At Cursor</a></p>
+</form>
+</body>
+</html>
