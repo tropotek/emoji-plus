@@ -6,7 +6,7 @@
 *.xpi
 
 .gitignore
-run.bat
+*.bat
 Thumbs.db
 .idea
 _notes
