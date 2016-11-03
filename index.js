@@ -56,7 +56,7 @@ for(var i = 0; i < emojiList.length; i++) {
   items.push(cm.Item({
       label: em.name,
       data: em.ascii,
-      image: self.data.url('emojione/'+em.unified+'.png')
+      image: self.data.url('image/'+em.unified+'.png')
     })
   );
 }
